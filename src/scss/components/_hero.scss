@@ -46,6 +46,7 @@ $support: #ffa000;
 
   .hero__img {
     object-fit: cover;
+    object-position: center top;
     height: min(var(--height, 90vh), 600px);
     width: 100%;
     z-index: -1;

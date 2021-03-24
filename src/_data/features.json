@@ -1,0 +1,19 @@
+{
+  "items": [
+    {
+      "title": "Title 1",
+      "text": "This is some info on the feature of the business",
+      "image": "/images/favicon.png"
+    },
+    {
+      "title": "Title 2",
+      "text": "This is some info on the feature of the business",
+      "image": "/images/favicon.png"
+    },
+    {
+      "title": "Title 3",
+      "text": "This is some info on the feature of the business",
+      "image": "/images/favicon.png"
+    }
+  ]
+}

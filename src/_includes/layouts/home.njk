@@ -19,12 +19,36 @@
 {% block content %}
   <main id="main-content" tabindex="-1">
     {% include "partials/components/hero.njk" %}
-    {% include "partials/components/post-list.njk" %}
-    {% include "partials/components/pagination.njk" %}
 
-    <div class="[ post__body ] [ inner-wrapper ] [ leading-loose pad-top-900 pad-bottom-900 text-500 ] [ sf-flow ] [ e-content ]">
-      <h2 class="[ font-serif ]">Request a Quote</h2>
-      {% include "partials/components/request-quote-form.njk" %}
+    <header class="[ intro ] [ pad-top-900 pad-bottom-max ]">
+      <div class="[ wrapper ] [ sf-flow ]">
+        <h2 class="[ intro__heading{{ ' intro__heading--compact' if page.url === '/' }} ] [ text-800 md:text-900 leading-tight ] [ p-name ]">Mission Statement</h2>
+        {% if missionStatement %}
+        <div class="[ intro__summary ] [ sf-flow ] [ leading-mid measure-short ]">{{ missionStatement | safe }}</div>
+        {% endif %}
+      </div>
+    </header>
+    
+    <div class="[ wrapper ] [ sf-flow ]">
+      <article class="[ pad-top-900 pad-bottom-max ]">
+        <h2 class="[ pad-bottom-300 ]">{{ featureTitle }}</h2>
+        <div class="auto-grid">
+          {% for item in features.items %}
+            <article>
+              <!-- <img src={{ item.image }} alt="favicon" height="20" width="20"> -->
+              <h3>{{ item.title }}</h3>
+              <p>{{ item.text }}</p>
+            </article>
+          {% endfor %}
+        </div>
+      </article>
+
+      <article>
+        <div class="[ post__body ] [  ] [ leading-loose pad-top-900 pad-bottom-900 text-500 ] [ sf-flow ] [ e-content ]">
+          <h2 class="[ font-serif ]">Request a Quote</h2>
+          {% include "partials/components/request-quote-form.njk" %}
+        </div>
+      </article>
     </div>
   </main>
 {% endblock %}
