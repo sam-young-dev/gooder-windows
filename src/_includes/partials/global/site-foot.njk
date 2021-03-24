@@ -15,10 +15,11 @@
         <theme-toggle></theme-toggle>
       </div>
     </div>
-    {% if site.showThemeCredit %}
-      <p class="[ site-foot__credit ] [ pad-top-900 ]">
-        Powered by the <a href="https://hylia.website" rel="external">Hylia Eleventy Starter Kit v{{ pkg.version }}</a>.
-      </p>
-    {% endif %}
+    <p class="[ site-foot__credit ] [ pad-top-900 ]">
+        Made with love by <a href="https://hylia.website" rel="external">Sam Young</a>.
+    </p>
+    <p class="[ site-foot__credit ] [  ]">
+        &copy; {{ helpers.currentYear() }} {{ site.name }} 
+    </p>
   </div>
 </footer>

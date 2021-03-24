@@ -3,17 +3,20 @@
     {
       "text": "About",
       "url": "/about",
-      "external": false
+      "external": false,
+      "button": false
     },
     {
       "text": "Contact",
       "url": "/contact",
-      "external": false
+      "external": false,
+      "button": false
     },
     {
       "text": "Request Quote",
       "url": "/request-quote",
-      "external": false
+      "external": false,
+      "button": true
     }
   ]
 }

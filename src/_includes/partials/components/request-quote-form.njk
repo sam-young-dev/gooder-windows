@@ -1,0 +1,26 @@
+{% from "macros/form.njk" import label, field, textarea, button %}
+
+<form name="request-quote" method="POST" data-netlify="true" action="/thank-you" netlify-honeypot="bot-field">
+  <ol class="[ field-list ]">
+    <li class="[ field-list__field-group ]">
+      {{ label("Company Name", "name") }}
+      {{ field( "text", "name", { required: true, placeholder: "Company", autocomplete: "name", autocorrect: "off", autocapitalize: "off" } ) }}
+    </li>
+    <li class="[ field-list__field-group ]">
+      {{ label("Email", "email") }}
+      {{ field( "email", "email", { required: true, placeholder: "company@mail.com", autocomplete: "email" } ) }}
+    </li>
+    <li class="[ field-list__field-group ]">
+      {{ label("Phone", "phone") }}
+      {{ field( "email", "email", { required: false, placeholder: "615-000-0000", autocomplete: "phone" } ) }}
+    </li>
+    <li class="[ field-list__field-group ]">
+      {{ label("Message", "message") }}
+      {{ textarea( "message", { required: true, autocapitalize: "sentences", spellcheck: "true" } ) }}
+    </li>
+    <li hidden>
+      <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+    </li>
+  </ol>
+  {{ button("Request Quote") }}
+</form>

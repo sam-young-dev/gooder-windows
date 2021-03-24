@@ -6,5 +6,9 @@ module.exports = {
     const wordsPerMinute = 200;
     const numberOfWords = text.split(/\s/g).length;
     return Math.ceil(numberOfWords / wordsPerMinute);
+  },
+  currentYear() {
+    const today = new Date();
+    return today.getFullYear();
   }
 };
