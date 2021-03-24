@@ -23,6 +23,7 @@ body {
   scroll-behavior: smooth;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
 }
 
 main {
@@ -59,6 +60,7 @@ img {
 @import 'utilities/inner-wrapper';
 @import 'utilities/visually-hidden';
 @import 'utilities/wrapper';
+@import 'utilities/full-bleed';
 
 // Components
 @import 'components/button';
@@ -74,3 +76,4 @@ img {
 @import 'components/skip-link';
 @import 'components/syntax-highlighting';
 @import 'components/video-player';
+@import 'components/hero';

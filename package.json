@@ -34,9 +34,10 @@
     "sass:process": "npm run sass:tokens && sass src/scss/global.scss src/_includes/assets/css/global.css --style=compressed",
     "cms:precompile": "make-dir dist/admin && nunjucks-precompile src/_includes > dist/admin/templates.js -i \"\\.(njk|css|svg)$\"",
     "cms:bundle": "rollup --config",
-    "start": "concurrently \"npm run sass:process -- --watch\" \"npm run cms:bundle -- --watch\" \"chokidar \\\"src/_includes/**\\\" -c \\\"npm run cms:precompile\\\"\" \"npm run serve\"",
+    "start": "concurrently \"npm run sass:process -- --watch\" \"npm run cms:bundle -- --watch\" \"chokidar \\\"src/_includes/**\\\" -c \\\"npm run cms:precompile\\\"\"",
     "serve": "cross-env ELEVENTY_ENV=development npx eleventy --serve",
-    "production": "npm run sass:process && npm run cms:precompile && npm run cms:bundle && npx eleventy"
+    "production": "npm run sass:process && npm run cms:precompile && npm run cms:bundle && npx eleventy",
+    "sam": "npm run serve"
   },
   "repository": {
     "type": "git",

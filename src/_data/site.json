@@ -1,13 +1,13 @@
 {
   "showThemeCredit": true,
-  "name": "Hylia Starter Kit",
-  "shortDesc": "Hylia is a lightweight Eleventy starter kit to help you to create your own blog or personal website.",
-  "url": "https://hylia.website",
-  "authorEmail": "me@andy-bell.design",
-  "authorHandle": "@hankchizljaw",
-  "authorName": "Andy Bell",
+  "name": "Gooder Windows",
+  "shortDesc": "A better window cleaning company",
+  "url": "https://gooderwindows.com",
+  "authorEmail": "gooderwindows@gmail.com",
+  "authorHandle": "",
+  "authorName": "Jonny Gooder",
   "enableThirdPartyComments": false,
   "maxPostsPerPage": 5,
-  "paymentPointer": "$ilp.uphold.com/MggmnFEyQqhk",
+  "paymentPointer": "",
   "faviconPath": "/images/favicon.png"
 }

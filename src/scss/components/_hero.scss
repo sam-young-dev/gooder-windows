@@ -1,0 +1,54 @@
+$background-color: #3c87b3;
+$support: #ffa000;
+
+@function svgColor($color) {
+  @return "%23" + str-slice("#{$color}", 2, -1);
+}
+
+.hero {
+  display: grid;
+  grid-template-areas: "hero";
+  place-items: center;
+  height: var(--height, 90vh);
+  max-height: 600px;
+  background-color: rgba($background-color, 0.4);
+  overflow: hidden;
+  color: whitesmoke;
+
+  &::before {
+    content: "";
+    grid-area: hero;
+    place-self: start;
+    width: 50vmin;
+    height: 50vmin;
+    border-radius: 50%;
+    transform: translate(-10%, -10%);
+    background-image: url("data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='#{svgColor($support)}' fill-opacity='0.6' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
+  }
+  
+  &::after {
+    content: "";
+    grid-area: hero;
+    place-self: end;
+    width: 30vmin;
+    height: 60vmin;
+    transform: translate(20%, 40%) rotate(45deg);
+    background-image: url("data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='#{svgColor($support)}' fill-opacity='0.6' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
+  }
+
+  > * {
+    grid-area: hero;
+  }
+
+  &__content {
+    z-index: 1;
+  }
+
+  .hero__img {
+    object-fit: cover;
+    height: min(var(--height, 90vh), 600px);
+    width: 100%;
+    z-index: -1;
+  }
+}
+
