@@ -62,6 +62,8 @@ img {
 @import 'utilities/wrapper';
 @import 'utilities/full-bleed';
 @import 'utilities/auto-grid';
+@import 'utilities/frame';
+@import 'utilities/flow';
 
 // Components
 @import 'components/button';
@@ -78,3 +80,4 @@ img {
 @import 'components/syntax-highlighting';
 @import 'components/video-player';
 @import 'components/hero';
+@import 'components/person';

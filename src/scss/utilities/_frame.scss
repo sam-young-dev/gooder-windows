@@ -1,0 +1,38 @@
+$frame-colors: ('primary', 'highlight', 'slate', 'primary-glare');
+
+.frame {
+  position: relative;
+
+  &::before {
+    content: '';
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -0.25rem;
+    left: -0.25rem;
+    border: 0.125rem solid get-color('dark');
+    border-radius: 0.25rem;
+    z-index: 1;
+
+    @media (min-width: 700px) {
+      top: -0.5rem;
+      left: -0.5rem;
+      border-width: 0.25rem;
+    }
+    // @include media-query('md') {
+    //   top: -0.5rem;
+    //   left: -0.5rem;
+    //   border-width: 0.25rem;
+    // }
+  }
+
+  // For each color, create a variant
+  @each $frame-color in $frame-colors {
+    &[data-frame='#{$frame-color}'] {
+      &::before {
+        border-color: get-color($frame-color);
+      }
+    }
+  }
+}

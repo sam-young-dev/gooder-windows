@@ -3,7 +3,9 @@
 {# Intro content #}
 {% set introHeading = title + ' ' + site.name %}
 
-{% block content %}
+{% set peopleItems = collections.people %} 
+
+{% block content %} 
   <main id="main-content" tabindex="-1">
     <article class="[ post ] [ h-entry ]">
       {% include "partials/components/intro.njk" %}
@@ -11,6 +13,10 @@
         {{ content | safe }}
       </div>
     </article>
+    <div class="[ wrapper ] [ flow pad-bottom-700 ]">
+      <h2 class="[ headline ] [ measure-micro color-quinary pad-bottom-300 ]" data-highlight="dark">Meet the team</h2>
+      {% include "partials/components/people.njk" %}
+    </div>
   </main>
 {% endblock %}
 
