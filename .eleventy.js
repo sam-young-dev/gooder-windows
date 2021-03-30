@@ -52,6 +52,13 @@ module.exports = function(config) {
       .slice(0, site.maxPostsPerPage);
   });
 
+  // Returns a list of people ordered by filename
+  config.addCollection('people', collection => {
+    return collection.getFilteredByGlob('./src/people/*.md').sort((a, b) => {
+      return Number(a.fileSlug) > Number(b.fileSlug) ? 1 : -1;
+    });
+  });
+
   // Plugins
   config.addPlugin(rssPlugin);
   config.addPlugin(syntaxHighlight);

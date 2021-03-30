@@ -3,14 +3,27 @@
 {# Intro content #}
 {% set introHeading = title + ' ' + site.name %}
 
-{% block content %}
+{% set peopleItems = collections.people %} 
+
+{% block content %} 
   <main id="main-content" tabindex="-1">
     <article class="[ post ] [ h-entry ]">
-      {% include "partials/components/intro.njk" %}
-      <div class="[ post__body ] [ inner-wrapper ] [ leading-loose pad-top-900 pad-bottom-900 text-500 ] [ sf-flow ] [ e-content ]">
+      <header class="[ intro ] [ pad-top-900 pad-bottom-max ]">
+        <div class="[ wrapper ] [ sf-flow ]">
+          <h1 class="[ intro__heading{{ ' intro__heading--compact' if page.url === '/' }} ] [ text-800 md:text-900 leading-tight ] [ p-name ]">{{ introHeading }}</h1>
+          {% if introSummary %}
+            <div class="[ intro__summary ] [ sf-flow ] [ leading-mid measure-short ]">{{ introSummary | safe }}</div>
+          {% endif %}
+        </div>
+      </header>
+      <div class="[ post__body ] [ wrapper ] [ leading-loose pad-top-900 pad-bottom-900 text-500 ] [ sf-flow ] [ e-content ]">
         {{ content | safe }}
       </div>
     </article>
+    <div class="[ wrapper ] [ flow pad-bottom-700 ]">
+      <h2 class="[ headline ] [ measure-micro color-quinary pad-bottom-300 ]" data-highlight="dark">Meet the team</h2>
+      {% include "partials/components/people.njk" %}
+    </div>
   </main>
 {% endblock %}
 
