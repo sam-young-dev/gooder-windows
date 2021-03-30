@@ -1,0 +1,9 @@
+.flexbox-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap, 1rem);
+}
+
+.flexbox-grid > * {
+  flex: 1 1 var(--flexbox-grid-min, 10ch);
+}

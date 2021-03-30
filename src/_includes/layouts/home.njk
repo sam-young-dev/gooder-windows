@@ -30,9 +30,9 @@
     </header>
     
     <div class="[ wrapper ] [ sf-flow ]">
-      <article class="[ pad-top-900 ]">
+      <article class="[ feature ] [ pad-top-900 ]">
         <h2 class="[ pad-bottom-300 ]">{{ featureTitle }}</h2>
-        <div class="auto-grid">
+        <div class="[ flexbox-grid ]">
           {% for item in features.items %}
             <article>
               <div class="feature__item">
@@ -45,7 +45,7 @@
         </div>
       </article>
     </div>
-  
+
     <article class="[ split ] [ panel ]">
       <div class="image"> 
         <img src={{ image.src }} alt={{ image.alt }} />

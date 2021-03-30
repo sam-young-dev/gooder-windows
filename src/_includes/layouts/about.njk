@@ -2,6 +2,7 @@
 
 {# Intro content #}
 {% set introHeading = title + ' ' + site.name %}
+{% set introSummary = content %}
 
 {% set peopleItems = collections.people %} 
 
@@ -16,11 +17,19 @@
           {% endif %}
         </div>
       </header>
-      <div class="[ post__body ] [ wrapper ] [ leading-loose pad-top-900 pad-bottom-900 text-500 ] [ sf-flow ] [ e-content ]">
-        {{ content | safe }}
-      </div>
     </article>
-    <div class="[ wrapper ] [ flow pad-bottom-700 ]">
+    <div style="overflow: hidden;">
+      <svg
+        preserveAspectRatio="none"
+        viewBox="0 0 1200 120"
+        xmlns="http://www.w3.org/2000/svg"
+        style="fill: #244435; width: 125%; height: 75px;"
+      >
+        <path d="M1200 120L0 16.48V0h1200v120z" />
+      </svg>
+    </div>
+
+    <div class="[ wrapper ] [ flow pad-top-700 pad-bottom-700 ]">
       <h2 class="[ headline ] [ measure-micro color-quinary pad-bottom-300 ]" data-highlight="dark">Meet the team</h2>
       {% include "partials/components/people.njk" %}
     </div>

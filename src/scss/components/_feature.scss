@@ -1,4 +1,6 @@
 .feature {
+  --flexbox-grid-min: 25ch;
+
   &__item {
     display: flex;
 
