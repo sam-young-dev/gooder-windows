@@ -20,7 +20,7 @@
   <main id="main-content" tabindex="-1">
     {% include "partials/components/hero.njk" %}
     
-    <header class="[ pad-top-900 pad-bottom-max bg-base ]">
+    <header class="[ pad-top-900 pad-bottom-max ]">
       <div class="[ wrapper ] [ sf-flow ]">
         <h2 class="[ intro__heading{{ ' intro__heading--compact' if page.url === '/' }} ] [ text-800 md:text-900 leading-tight ] [ p-name ]">Mission</h2>
         {% if missionStatement %}
@@ -50,8 +50,9 @@
       <div class="image"> 
         <img src={{ image.src }} alt={{ image.alt }} />
       </div>
-      <div class="[ text ] [ pad-top-700 ]"> 
+      <div class="[ text ] [ pad-top-700 bg-primary ]"> 
         <div class="[ content ] [ inner-wrapper ]">  
+          <h3>Title</h3> 
           <p>Your bones don't break, mine do. That's clear. Your cells react to bacteria and viruses differently than mine. You don't get sick, I do. That's also clear. But for some reason, you and I react the exact same way to water. We swallow it too fast, we choke. We get some in our lungs, we drown. However unreal it may seem, we are connected, you and I. We're on the same curve, just on opposite ends.</p>
         </div>
       </div> 

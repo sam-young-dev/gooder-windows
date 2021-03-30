@@ -20,8 +20,6 @@
 
   .text {
     grid-area: text;
-    background-color: #{get-color('secondary')};
-    // color: #{get-color('light')};
     color: whitesmoke;
     
     .content {
