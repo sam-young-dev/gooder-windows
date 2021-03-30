@@ -1,0 +1,31 @@
+.split {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  grid-template-areas: 
+    "image text";
+  height: var(--height, 80vh);
+  overflow: hidden;
+
+  .image {
+    grid-area: image;
+
+    img {
+      object-fit: cover;
+      object-position: center top;
+      height: min(var(--height, 80vh), 600px);
+      width: 100%;
+      z-index: -1;
+    }
+  }
+
+  .text {
+    grid-area: text;
+    background-color: #{get-color('secondary')};
+    // color: #{get-color('light')};
+    color: whitesmoke;
+    
+    .content {
+      max-width: 45ch;
+    }
+  }
+}

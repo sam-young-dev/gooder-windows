@@ -1,5 +1,6 @@
 .intro {
-  background: var(--color-theme-highlight-block);
+  background: get-color('secondary');
+  color: whitesmoke;
 
   &__summary {
     --flow-space: #{get-size(500)};

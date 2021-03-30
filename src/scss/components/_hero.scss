@@ -1,5 +1,5 @@
-$background-color: #3c87b3;
-$support: #ffa000;
+$background-color: #244435;
+$support: #d8e8e7;
 
 @function svgColor($color) {
   @return "%23" + str-slice("#{$color}", 2, -1);

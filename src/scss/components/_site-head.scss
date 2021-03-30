@@ -1,9 +1,17 @@
 .site-head {
-  background-color: transparent;
+  // background-color: whitesmoke;
+  // color: whitesmoke;
+
+  &__wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 get-size(800);
+  }
 
   &__site-name {
     font-weight: 900;
     text-decoration: none;
     color: var(--color-text);
+    // color: whitesmoke;
   }
 }
