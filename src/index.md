@@ -8,6 +8,9 @@ metaDesc: 'Home page for Gooder Windows LLC.'
 missionStatement: This is the mission statement
 socialImage: ''
 featureTitle: Features
+image:
+  src: /images/highrise.jpg
+  alt: Window cleaner cleaning highrise building
 ---
 
 Here are some more details here.
