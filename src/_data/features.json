@@ -3,17 +3,17 @@
     {
       "title": "Title 1",
       "text": "This is some info on the feature of the business",
-      "image": "/images/favicon.png"
+      "image": "/images/award.svg"
     },
     {
       "title": "Title 2",
       "text": "This is some info on the feature of the business",
-      "image": "/images/favicon.png"
+      "image": "/images/clock.svg"
     },
     {
       "title": "Title 3",
       "text": "This is some info on the feature of the business",
-      "image": "/images/favicon.png"
+      "image": "/images/layout.svg"
     }
   ]
 }

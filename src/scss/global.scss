@@ -64,6 +64,7 @@ img {
 @import 'utilities/auto-grid';
 @import 'utilities/frame';
 @import 'utilities/flow';
+@import 'utilities/panel';
 
 // Components
 @import 'components/button';
@@ -81,3 +82,5 @@ img {
 @import 'components/video-player';
 @import 'components/hero';
 @import 'components/person';
+@import 'components/cta';
+@import 'components/feature';

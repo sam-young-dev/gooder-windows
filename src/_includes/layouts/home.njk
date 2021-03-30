@@ -35,20 +35,17 @@
         <div class="auto-grid">
           {% for item in features.items %}
             <article>
-              <!-- <img src={{ item.image }} alt="favicon" height="20" width="20"> -->
-              <h3>{{ item.title }}</h3>
+              <div class="feature__item">
+                <img src={{ item.image }} alt={{ item.image }} />
+                <h3>{{ item.title }}</h3>
+              </div>
               <p>{{ item.text }}</p>
             </article>
           {% endfor %}
         </div>
       </article>
-
-      <article>
-        <div class="[ post__body ] [  ] [ leading-loose pad-top-900 pad-bottom-900 text-500 ] [ sf-flow ] [ e-content ]">
-          <h2 class="[ font-serif ]">Request a Quote</h2>
-          {% include "partials/components/request-quote-form.njk" %}
-        </div>
-      </article>
     </div>
+
+    {% include "partials/components/cta.njk" %}
   </main>
 {% endblock %}

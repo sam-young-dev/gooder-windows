@@ -1,0 +1,9 @@
+.feature {
+  &__item {
+    display: flex;
+
+    img {
+      margin-inline-end: get-size(300);
+    }
+  }
+}
