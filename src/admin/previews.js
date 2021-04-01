@@ -21,31 +21,20 @@ const Home = ({ entry }) => (
   <Preview
     entry={entry}
     path="layouts/home.njk"
-    context={({ title, body, postsHeading, archiveButtonText }) => ({
+    context={({ title, body, archiveButtonText }) => ({
       title,
       content: markdownFilter(body),
-      postsHeading,
-      archiveButtonText,
-      collections: {
-        postFeed: [{
-          url: 'javascript:void(0)',
-          date: new Date(),
-          data: {
-            title: 'Sample Post',
-          },
-        }],
-      },
+      archiveButtonText
     })}
   />
 );
 
-const Post = ({ entry }) => (
+const About = ({ entry }) => (
   <Preview
     entry={entry}
-    path="layouts/post.njk"
-    context={({ title, date, body }) => ({
+    path="layouts/about.njk"
+    context={({ title, body }) => ({
       title,
-      date,
       content: markdownFilter(body || ''),
     })}
   />
@@ -89,7 +78,7 @@ const Nav = ({ entry }) => (
 );
 
 CMS.registerPreviewTemplate('home', Home);
-CMS.registerPreviewTemplate('posts', Post);
+CMS.registerPreviewTemplate('about', About);
 CMS.registerPreviewTemplate('generic_pages', Page);
 CMS.registerPreviewTemplate('site_data', SiteData);
 CMS.registerPreviewTemplate('nav', Nav);
