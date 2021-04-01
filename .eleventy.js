@@ -1,5 +1,3 @@
-const rssPlugin = require('@11ty/eleventy-plugin-rss');
-const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const fs = require('fs');
 
 // Import filters
@@ -36,21 +34,7 @@ module.exports = function(config) {
   config.addPassthroughCopy('node_modules/nunjucks/browser/nunjucks-slim.js');
   config.addPassthroughCopy('src/robots.txt');
 
-  const now = new Date();
-
   // Custom collections
-  const livePosts = post => post.date <= now && !post.data.draft;
-  config.addCollection('posts', collection => {
-    return [
-      ...collection.getFilteredByGlob('./src/posts/*.md').filter(livePosts)
-    ].reverse();
-  });
-
-  config.addCollection('postFeed', collection => {
-    return [...collection.getFilteredByGlob('./src/posts/*.md').filter(livePosts)]
-      .reverse()
-      .slice(0, site.maxPostsPerPage);
-  });
 
   // Returns a list of people ordered by filename
   config.addCollection('people', collection => {
@@ -60,8 +44,6 @@ module.exports = function(config) {
   });
 
   // Plugins
-  config.addPlugin(rssPlugin);
-  config.addPlugin(syntaxHighlight);
 
   // 404
   config.setBrowserSyncConfig({
