@@ -24,10 +24,7 @@ collections:
           - label: "Section"
             name: "section"
             fields:
-              - label: "image"
-                - fields: 
-                  - {label: "Image", name: "src", widget: "image"}
-                  - {label: "Image alt", name: "alt", widget: "string"}
+              - {label: "Image", name: "src", widget: "image"}
               - {label: "Section Title", name: "title", widget: "string"}
               - {label: "Section Text", name: "text", widget: "string"}
       - name: "about"
