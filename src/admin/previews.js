@@ -21,10 +21,11 @@ const Home = ({ entry }) => (
   <Preview
     entry={entry}
     path="layouts/home.njk"
-    context={({ title, body, archiveButtonText }) => ({
+    context={({ title, body, missionStatement, featureTitle }) => ({
       title,
       content: markdownFilter(body),
-      archiveButtonText
+      missionStatement,
+      featureTitle
     })}
   />
 );
