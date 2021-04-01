@@ -21,7 +21,9 @@ collections:
           - {label: "Body", name: "body", widget: "markdown"}
           - {label: "Mission Statement", name: "missionStatement", widget: "string"}
           - {label: "Features Title", name: "featureTitle", widget: "string"}
-          - {label: "Section Title", name: "section.title", widget: "string"}
+          - {label: "Section Image", name: "sectionImage", widget: "image"}
+          - {label: "Section Title", name: "sectionTitle", widget: "string"}
+          - {label: "Section Text", name: "sectionText", widget: "string"}
       - name: "about"
         label: "About Page"
         delete: false
