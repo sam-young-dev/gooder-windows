@@ -15,12 +15,21 @@ collections:
         slug: "{{slug}}"
         fields:
           - {label: "Layout", name: "layout", widget: "hidden", default: "layouts/njk.njk"}
-          - {label: "Title", name: "title", widget: "string"}
           - {label: "SEO Meta Title", name: "metaTitle", widget: "string", required: false}
           - {label: "SEO Meta Description", name: "metaDesc", widget: "string", required: false}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
           - {label: "Mission Statement", name: "missionStatement", widget: "string"}
           - {label: "Features Title", name: "featureTitle", widget: "string"}
-          - {label: "Body", name: "body", widget: "markdown"}
+          - label: "Section"
+            name: "section"
+            fields:
+              - label: "image"
+                - fields: 
+                  - {label: "Image", name: "src", widget: "image"}
+                  - {label: "Image alt", name: "alt", widget: "string"}
+              - {label: "Section Title", name: "title", widget: "string"}
+              - {label: "Section Text", name: "text", widget: "string"}
       - name: "about"
         label: "About Page"
         delete: false
@@ -71,6 +80,20 @@ collections:
               - {label: "Text", name: "text", widget: "string"}
               - {label: "Url", name: "url", widget: "string"}
               - {label: "Is url to external site?", name: "external", widget: "boolean", required: false}
+              - {label: "Button", name: "button", widget: "boolean", required: false}
+      - label: "Features"
+        name: "features"
+        delete: false
+        file: "src/_data/features.json"
+        fields:
+          - label: "Items"
+            name: "items"
+            widget: "list"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Text", name: "text", widget: "string"}
+              - {label: "Image", name: "image", widget: "image"}
+              - {label: "Url", name: "url", widget: "string"}
       - label: "Theme Settings"
         name: "theme"
         delete: false
